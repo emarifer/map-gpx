@@ -8,9 +8,9 @@ import icon from '/markers/marker-icon.png';
 import iconShadow from '/markers/marker-shadow.png';
 
 const DefaultIcon = L.icon({
-	iconSize: [25, 41],
-	iconAnchor: [10, 41],
-	popupAnchor: [2, -40],
+	iconSize: [25, 40],
+	// iconAnchor: [10, 40],
+	// popupAnchor: [2, -40],
 	iconUrl: icon,
 	shadowUrl: iconShadow,
 });
