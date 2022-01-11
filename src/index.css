@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: local(Ubuntu), url(/fonts/ubuntu.woff2) format('woff2');
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #282c34;
+	color: whitesmoke;
+	font-family: 'Ubuntu';
+	margin: 0;
+	padding: 0;
+}
