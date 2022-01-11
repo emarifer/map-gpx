@@ -9,6 +9,7 @@ export const StartLocation = () => {
 
 	return (
 		<button
+			title="Geolocation"
 			onClick={handleLocation}
 			className={`buttons buttons__location ${
 				trackState.location && 'buttons__location--active'

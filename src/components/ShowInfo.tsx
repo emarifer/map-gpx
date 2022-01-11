@@ -6,7 +6,11 @@ export const ShowInfo = () => {
 	const { setDisplayInfo } = useContext(TrackContext);
 
 	return (
-		<button onClick={() => setDisplayInfo(true)} className="buttons buttons__info">
+		<button
+			title="Track Info"
+			onClick={() => setDisplayInfo(true)}
+			className="buttons buttons__info"
+		>
 			<BsFillInfoCircleFill />
 		</button>
 	);

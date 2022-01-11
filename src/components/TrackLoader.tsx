@@ -25,7 +25,11 @@ export const TrackLoader = () => {
 
 	return (
 		<>
-			<label className="buttons buttons__label" htmlFor="input-track">
+			<label
+				title="Add Track"
+				className="buttons buttons__label"
+				htmlFor="input-track"
+			>
 				<FaPaperclip />
 			</label>
 			<input

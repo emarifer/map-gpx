@@ -11,7 +11,11 @@ export const RemoveTrack = () => {
 	};
 
 	return (
-		<button onClick={handleDeletion} className="buttons buttons__remove">
+		<button
+			title="Remove Track"
+			onClick={handleDeletion}
+			className="buttons buttons__remove"
+		>
 			<AiTwotoneDelete />
 		</button>
 	);
