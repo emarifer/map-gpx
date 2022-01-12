@@ -1,7 +1,7 @@
 {
     "extends": "./tsconfig",
     "compilerOptions": {
-        "lib": ["WebWorker", "ES2015"]
+        "lib": ["WebWorker", "ESNext"]
     },
     "files": ["./src/sw.ts"]
 }
