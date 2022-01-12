@@ -1,3 +1,4 @@
+export { DeleteCache } from './DeleteCache';
 export { LocationMarker } from './LocationMarker';
 export { MapLayers } from './MapLayers';
 export { MapView } from './MapView';

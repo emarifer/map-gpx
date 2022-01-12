@@ -75,9 +75,16 @@ input {
 	color: goldenrod;
 }
 
+.buttons__cache {
+	background-color: rgb(73, 126, 95);
+	color: wheat;
+}
+
+/* Map Container */
+
 .leaflet-container {
 	width: 90vw;
-	height: 75vh;
+	height: 78vh;
 	border-radius: 0.7rem;
 	margin: 0 auto;
 	z-index: 0;

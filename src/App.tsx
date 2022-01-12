@@ -1,4 +1,5 @@
 import {
+	DeleteCache,
 	MapView,
 	Modal,
 	RemoveTrack,
@@ -20,6 +21,7 @@ export const App = () => (
 				<StartLocation />
 				<RemoveTrack />
 				<ShowInfo />
+				<DeleteCache />
 			</div>
 		</header>
 		<MapView />
