@@ -32,6 +32,7 @@ export const LocationMarker = () => {
 			? map.locate({ watch: true, timeout: 5000 }).on('locationfound', (e) => {
 				setPosition(e.latlng);
 				setUserAccuracy(e.accuracy);
+				// console.log('render');
 				// map.flyTo(e.latlng, map.getZoom());
 			})
 			: setPosition(null);
@@ -39,8 +40,8 @@ export const LocationMarker = () => {
 		return () => {
 			map.stopLocate();
 		};
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [location, map]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [location]);
 
 	return position === null ? null : (
 		<Marker position={position}>
