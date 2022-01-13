@@ -14,7 +14,7 @@ import './app.css';
 export const App = () => (
 	<TrackProvider>
 		<header>
-			<h4>Camina 🥾 con mi App GPS</h4>
+			<h4>Camina 🥾 con mi App GPS / TEST</h4>
 			<p>(React TS/React-Leaflet)</p>
 			<div className="controls">
 				<TrackLoader />

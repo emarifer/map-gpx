@@ -17,7 +17,7 @@ export default ({ mode }) => {
 			react(),
 			VitePWA({
 				strategies: 'injectManifest',
-				srcDir: 'src',
+				srcDir: 'sw',
 				filename: 'sw.ts',
 				// registerType: 'autoUpdate',
 				includeAssets: [
