@@ -11,7 +11,7 @@ export default ({ mode }) => {
 	return defineConfig({
 		base:
 			process.env.NODE_ENV === 'production'
-				? `${process.env.BASE_URL}`.length === 0
+				? `${process.env.BASE_URL}`.length === 0 || !process.env.BASE_URL
 					? '/'
 					: `/${process.env.BASE_URL}/` // prod
 				: '/', // dev,
