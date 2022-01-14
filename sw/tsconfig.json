@@ -15,5 +15,5 @@
 		"isolatedModules": true,
 		"noEmit": true,
 	},
-	"includes": ["./"]
+	"files": ["sw.ts"]
 }
