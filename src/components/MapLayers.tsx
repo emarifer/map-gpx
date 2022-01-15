@@ -1,20 +1,18 @@
-import { LayersControl, TileLayer, WMSTileLayer } from 'react-leaflet';
+import { LayersControl, TileLayer } from 'react-leaflet';
 
 export const MapLayers = () => (
 	<LayersControl position="topright">
 		<LayersControl.BaseLayer checked name="Mapa raster IGN - Spain">
-			<WMSTileLayer
-				layers="mtn_rasterizado"
-				url="https://www.ign.es/wms-inspire/mapa-raster"
-				attribution='&copy; <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a> contributors'
+			<TileLayer
+				url="https://tms-mapa-raster.ign.es/1.0.0/mapa-raster/{z}/{x}/{-y}.jpeg"
+				attribution='MTN ráster CC BY 4.0 <a href="http://www.ign.es/" target="_blank"><b>ign.es</b></a>'
 				crossOrigin={true}
 			/>
 		</LayersControl.BaseLayer>
 		<LayersControl.BaseLayer name="Ortoimagen PNOA - Spain">
-			<WMSTileLayer
-				layers="OI.OrthoimageCoverage"
-				url="https://www.ign.es/wms-inspire/pnoa-ma"
-				attribution='PNOA cedido por &copy; <a href="http://www.ign.es/ign/main/index.do" target="_blank">Instituto Geográfico Nacional de España</a> contributors'
+			<TileLayer
+				url="https://tms-pnoa-ma.ign.es/1.0.0/pnoa-ma/{z}/{x}/{-y}.jpeg"
+				attribution='Ortofoto PNOA CC-BY 4.0 <a href="http://www.scne.es" target="_blank"><b>scne.es</b></a>'
 				crossOrigin={true}
 			/>
 		</LayersControl.BaseLayer>

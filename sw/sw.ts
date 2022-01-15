@@ -8,7 +8,7 @@ import { ExpirationPlugin } from 'workbox-expiration';
 // import { clientsClaim } from 'workbox-core';
 
 registerRoute(
-	/.*(www.ign.es\/wms-inspire|openstreetmap|opentopomap).*/,
+	/.*(ign.es|openstreetmap|opentopomap).*/,
 	new CacheFirst({
 		cacheName: 'cache-map',
 		plugins: [
