@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 declare let self: ServiceWorkerGlobalScope;
 
 import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching';
@@ -34,4 +33,7 @@ precacheAndRoute(self.__WB_MANIFEST);
  *
  * AVANZADO (injectManifest) EN TYPESCRIPT. VER:
  * https://vite-plugin-pwa.netlify.app/guide/inject-manifest.html#advanced-injectmanifest
+ *
+ * EL ERROR DEL ESLINT (NO DE TYPESCRIPT) SE ELIMINA AÑADIENDO "ServiceWorkerGlobalScope"
+ * A "globals" COMO "readonly"
  */

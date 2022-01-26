@@ -18,7 +18,8 @@
 		"sourceType": "module"
 	},
 	"globals": {
-		"JSX": true
+		"JSX": true,
+		"ServiceWorkerGlobalScope": "readonly"
 	},
 	"plugins": ["react", "react-hooks", "@typescript-eslint"],
 	"rules": {

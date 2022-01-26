@@ -6,15 +6,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
-	Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
+	const base = loadEnv(mode, process.cwd()).VITE_BASE_URL
+		? `/${loadEnv(mode, process.cwd()).VITE_BASE_URL}/`
+		: '/';
 
 	return defineConfig({
-		base:
-			process.env.NODE_ENV === 'production'
-				? `${process.env.BASE_URL}`.length === 0 || !process.env.BASE_URL
-					? '/'
-					: `/${process.env.BASE_URL}/` // prod
-				: '/', // dev,
+		base,
 		plugins: [
 			react(),
 			VitePWA({

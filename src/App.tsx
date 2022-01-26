@@ -27,7 +27,7 @@ export const App = () => (
 		<MapView />
 		<Modal />
 		<footer>
-			MIT Licensed | Copyright © {Date().split(' ')[3]} Enrique Marín
+			MIT Licensed | Copyright © {new Date().getFullYear()} Enrique Marín
 		</footer>
 	</TrackProvider>
 );
