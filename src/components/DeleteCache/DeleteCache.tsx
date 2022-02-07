@@ -1,17 +1,27 @@
+import classNamesBind from 'classnames/bind';
 import { HiRefresh } from 'react-icons/hi';
 import Swal from 'sweetalert2';
+
+import common from '../../app.module.scss';
+import styles from './styles.module.scss';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 export const DeleteCache = () => {
+	const cache = classNamesBind({
+		[common.buttons]: true,
+		[styles.cache]: true,
+	});
+
 	const handleDeleteCache = () => {
 		Swal.fire({
 			icon: 'warning',
-			title: 'Confirmation of deleting map cache…',
-			text: 'If you don\'t have a connection, you will lose your data',
+			title: 'Confirmación de eliminación de caché de mapa…',
+			text: 'Si no tienes conexión, perderás tus datos',
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
-			confirmButtonText: 'Ok, delete it!',
+			confirmButtonText: 'Ok, bórralo!',
+			cancelButtonText: 'Cancelar',
 		}).then((result) => {
 			if (result.isConfirmed) {
 				if ('caches' in window) {
@@ -29,11 +39,7 @@ export const DeleteCache = () => {
 	};
 
 	return (
-		<button
-			title="Delete Cache"
-			onClick={handleDeleteCache}
-			className="buttons buttons__cache"
-		>
+		<button className={cache} onClick={handleDeleteCache} title="Borrar Cache">
 			<HiRefresh />
 		</button>
 	);

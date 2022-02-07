@@ -33,7 +33,7 @@ export const LocationMarker = () => {
 				setPosition(e.latlng);
 				setUserAccuracy(e.accuracy);
 				// console.log('render');
-				// map.flyTo(e.latlng, map.getZoom());
+				map.flyTo(e.latlng, map.getZoom());
 			})
 			: setPosition(null);
 

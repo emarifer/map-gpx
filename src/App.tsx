@@ -9,14 +9,14 @@ import {
 } from './components';
 import { TrackProvider } from './context';
 
-import './app.css';
+import styles from './app.module.scss';
 
 export const App = () => (
 	<TrackProvider>
 		<header>
 			<h4>Camina 🥾 con mi App GPS</h4>
 			<p>(PWA - React TS/React-Leaflet)</p>
-			<div className="controls">
+			<div className={styles.controls}>
 				<TrackLoader />
 				<StartLocation />
 				<RemoveTrack />

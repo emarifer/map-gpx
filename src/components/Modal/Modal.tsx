@@ -1,7 +1,11 @@
-import { TrackContext } from '../context/TrackContext';
-import React from 'react';
-import { useContext } from 'react';
+import { TrackContext } from '../../context/TrackContext';
+import { MouseEvent, useContext } from 'react';
+import classNames from 'classnames/bind';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+
+import styles from './styles.module.scss';
+
+const classes = classNames.bind(styles);
 
 export const Modal = () => {
 	const {
@@ -11,20 +15,24 @@ export const Modal = () => {
 
 	const { name, distance, maxElevation, time } = infoTrack;
 
-	const handleModalDialogClick = (e: React.MouseEvent) => {
+	const handleModalDialogClick = (e: MouseEvent) => {
 		e.stopPropagation();
 	};
+
+	const { overlay, modal, show, header, content, footer, button } = styles;
+
+	const modalStatus = classes({
+		[modal]: true,
+		[show]: displayInfo,
+	});
 
 	return (
 		<>
 			{displayInfo && (
-				<div className="modal__overlay" onClick={() => setDisplayInfo(false)} />
+				<div className={overlay} onClick={() => setDisplayInfo(false)} />
 			)}
-			<div
-				className={`modal ${displayInfo && 'modal--show'}`}
-				onClick={handleModalDialogClick}
-			>
-				<div className="modal__header">
+			<div className={modalStatus} onClick={handleModalDialogClick}>
+				<div className={header}>
 					<h2>Track Info</h2>
 					<div style={{ fontSize: '1.4rem' }}>
 						<BsFillInfoCircleFill />
@@ -32,7 +40,7 @@ export const Modal = () => {
 				</div>
 
 				{name ? (
-					<div className="modal__content">
+					<div className={content}>
 						<p>
 							<b>Name:</b> {name}
 						</p>
@@ -47,14 +55,16 @@ export const Modal = () => {
 						</p>
 					</div>
 				) : (
-					<div className="modal__content">
+					<div className={content}>
 						<p style={{ textAlign: 'center' }}>
 							<strong>No Info 🙁</strong>
 						</p>
 					</div>
 				)}
-				<div className="modal__footer">
-					<button onClick={() => setDisplayInfo(false)}>OK</button>
+				<div className={footer}>
+					<button className={button} onClick={() => setDisplayInfo(false)}>
+						OK
+					</button>
 				</div>
 			</div>
 		</>

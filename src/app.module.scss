@@ -1,0 +1,53 @@
+/* Header */
+header {
+	color: whitesmoke;
+	font-size: calc(10px + 2vmin);
+	text-align: center;
+
+	h4,
+	p {
+		margin: 0.4rem;
+	}
+}
+
+/* Controls */
+.controls {
+	align-items: center;
+	column-gap: 1rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+/* Buttons */
+.buttons {
+	align-items: center;
+	border-radius: 50%;
+	border: goldenrod 0.3px solid;
+	cursor: pointer;
+	display: flex;
+	font-size: 1rem;
+	font-weight: bold;
+	justify-content: center;
+	outline: none;
+	padding: 0.7rem;
+
+	@media (hover: hover) {
+		&:hover {
+			transition: transform 100ms;
+			transform: scale(1.1);
+		}
+	}
+
+	&:active {
+		transition: transform 100ms;
+		transform: scale(1.2);
+	}
+}
+
+/* Footer */
+footer {
+	font-size: 14px;
+	margin-top: 5px;
+	text-align: center;
+}

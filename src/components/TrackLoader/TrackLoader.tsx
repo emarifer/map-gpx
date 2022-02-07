@@ -1,8 +1,17 @@
-import { TrackContext } from '../context/TrackContext';
+import { TrackContext } from '../../context/TrackContext';
 import { ChangeEvent, useContext, useRef } from 'react';
+import classNamesBind from 'classnames/bind';
 import { FaPaperclip } from 'react-icons/fa';
 
+import common from '../../app.module.scss';
+import styles from './styles.module.scss';
+
 export const TrackLoader = () => {
+	const label = classNamesBind({
+		[common.buttons]: true,
+		[styles.label]: true,
+	});
+
 	const { setTrack } = useContext(TrackContext);
 	const inputRef = useRef<HTMLInputElement>(null);
 
@@ -25,20 +34,17 @@ export const TrackLoader = () => {
 
 	return (
 		<>
-			<label
-				title="Add Track"
-				className="buttons buttons__label"
-				htmlFor="input-track"
-			>
+			<label className={label} htmlFor="input-track" title="Añadir Track">
 				<FaPaperclip />
 			</label>
 			<input
+				accept="application/gpx+xml"
+				className={styles.input}
+				id="input-track"
+				onChange={openfile}
+				onClick={resetFileUploader}
 				ref={inputRef}
 				type="file"
-				accept="application/gpx+xml"
-				id="input-track"
-				onClick={resetFileUploader}
-				onChange={openfile}
 			/>
 		</>
 	);
