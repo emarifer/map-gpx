@@ -4,9 +4,22 @@ header {
 	font-size: calc(10px + 2vmin);
 	text-align: center;
 
-	h4,
+	h4 {
+		margin: 0.2rem;
+	}
+
 	p {
-		margin: 0.4rem;
+		align-items: center;
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		margin: 0.1rem 0.4rem 0.2rem 0.4rem;
+
+		a {
+			color: whitesmoke;
+			font-size: 1.3rem;
+			text-decoration: none;
+		}
 	}
 }
 

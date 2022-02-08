@@ -48,7 +48,7 @@ export const Modal = () => {
 							<b>Distancia:</b> {distance}
 						</p>
 						<p>
-							<b>Max. Elevación:</b> {maxElevation}
+							<b>Máx. Elevación:</b> {maxElevation}
 						</p>
 						<p>
 							<b>Tiempo:</b> {time}
