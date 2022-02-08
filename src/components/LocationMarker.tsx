@@ -45,7 +45,7 @@ export const LocationMarker = () => {
 
 	return position === null ? null : (
 		<Marker position={position}>
-			<Popup>You are less than {userAccuracy} meters</Popup>
+			<Popup>Precisión de la posición: {userAccuracy} m</Popup>
 		</Marker>
 	);
 };

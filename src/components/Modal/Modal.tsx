@@ -42,22 +42,22 @@ export const Modal = () => {
 				{name ? (
 					<div className={content}>
 						<p>
-							<b>Name:</b> {name}
+							<b>Nombre:</b> {name}
 						</p>
 						<p>
-							<b>Distance:</b> {distance}
+							<b>Distancia:</b> {distance}
 						</p>
 						<p>
-							<b>Max. Elevation:</b> {maxElevation}
+							<b>Max. Elevación:</b> {maxElevation}
 						</p>
 						<p>
-							<b>Time:</b> {time}
+							<b>Tiempo:</b> {time}
 						</p>
 					</div>
 				) : (
 					<div className={content}>
 						<p style={{ textAlign: 'center' }}>
-							<strong>No Info 🙁</strong>
+							<strong>Sin Información 🙁</strong>
 						</p>
 					</div>
 				)}

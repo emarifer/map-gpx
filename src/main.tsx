@@ -12,11 +12,12 @@ const updateSW = registerSW({
 	onNeedRefresh() {
 		Swal.fire({
 			icon: 'info',
-			title: 'New Content Available!!',
+			title: 'Nuevo contenido disponible!!',
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
-			confirmButtonText: 'Ok, update it!',
+			confirmButtonText: 'Ok, Actualízame!',
+			cancelButtonText: 'Cancelar',
 		}).then((result) => {
 			if (result.isConfirmed) {
 				updateSW();
