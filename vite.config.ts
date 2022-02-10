@@ -5,13 +5,11 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
-export default ({ mode }) => {
-	const base = loadEnv(mode, process.cwd()).VITE_BASE_URL
-		? `/${loadEnv(mode, process.cwd()).VITE_BASE_URL}/`
-		: '/';
-
-	return defineConfig({
-		base,
+export default ({ mode }) =>
+	defineConfig({
+		base: loadEnv(mode, process.cwd()).VITE_BASE_URL
+			? `/${loadEnv(mode, process.cwd()).VITE_BASE_URL}/`
+			: '/',
 		plugins: [
 			react(),
 			VitePWA({
@@ -26,6 +24,10 @@ export default ({ mode }) => {
 					'icons/apple-touch-icon.png',
 					'icons/android-chrome-192x192.png',
 					'icons/android-chrome-512x512.png',
+					'icons/safari-pinned-tab.svg',
+					'icons/favicon-16x16.png',
+					'icons/favicon-32x32.png',
+					'icons/mstile-150x150.png',
 					'markers/pin-icon-end.png',
 					'markers/pin-icon-start.png',
 					'markers/pin-icon-wpt.png',
@@ -56,6 +58,12 @@ export default ({ mode }) => {
 							sizes: '512x512',
 							type: 'image/png',
 						},
+						{
+							src: 'icons/safari-pinned-tab.svg',
+							sizes: '640x640',
+							type: 'image/svg+xml',
+							purpose: 'any maskable',
+						},
 					],
 					start_url: '.',
 					// scope: 'https://emarifer.github.io/test-vite/',
@@ -64,4 +72,3 @@ export default ({ mode }) => {
 			}),
 		],
 	});
-};
