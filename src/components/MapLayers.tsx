@@ -5,7 +5,7 @@ export const MapLayers = () => (
 		<LayersControl.BaseLayer checked name="Mapa raster IGN - Spain">
 			<TileLayer
 				maxZoom={17}
-				url="https://tms-mapa-raster.ign.es/1.0.0/mapa-raster/{z}/{x}/{-y}.jpeg"
+				url="https://www.ign.es/wmts/mapa-raster?request=getTile&layer=MTN&TileMatrixSet=GoogleMapsCompatible&TileMatrix={z}&TileCol={x}&TileRow={y}&format=image/jpeg"
 				attribution='MTN ráster CC BY 4.0 <a href="http://www.ign.es/" target="_blank" rel="noopener noreferrer"><b>ign.es</b></a>'
 				crossOrigin={true}
 			/>
